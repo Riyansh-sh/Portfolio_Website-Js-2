@@ -33,7 +33,7 @@ const handleMouseMove = (e) => {
     letters.forEach((letter) => { 
         const { left: l, width: w } = letter.getBoundingClientRect();
         const distance = Math.abs(mouseX - (l - left + w / 2));
-        const intensity = Math.exp(-(distance ** 2) / 200000);
+        const intensity = Math.exp(-(distance ** 2) / 2000);
 
         animateLetter(letter, min + (max - min) * intensity);
     }
